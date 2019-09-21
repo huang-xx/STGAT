@@ -153,7 +153,7 @@ def plot_trajectory(args, loader, generator):
 
             for _ in range(args.num_samples):
                 pred_traj_fake_rel = generator(
-                    obs_traj_rel, obs_traj, seq_start_end, 0, False, 3
+                    obs_traj_rel, obs_traj, seq_start_end, 0, 3
                 )
                 pred_traj_fake_rel = pred_traj_fake_rel[-args.pred_len :]
 
@@ -191,7 +191,7 @@ def plot_trajectory(args, loader, generator):
                         ground_truth_input_x_piccoor[i, :],
                         ground_truth_input_y_piccoor[i, :],
                         "r-",
-                        linewidth=2,
+                        linewidth=４,
                         label="Observed Trajectory",
                     )[0]
                     observed_line.axes.annotate(
@@ -207,7 +207,7 @@ def plot_trajectory(args, loader, generator):
                         arrowprops=dict(
                             arrowstyle="->", color=observed_line.get_color(), lw=1
                         ),
-                        size=10,
+                        size=２０,
                     )
                     ground_line = plt.plot(
                         np.append(
@@ -219,7 +219,7 @@ def plot_trajectory(args, loader, generator):
                             ground_truth_output_y_piccoor[i, :],
                         ),
                         "b-",
-                        linewidth=2,
+                        linewidth=４,
                         label="Ground Truth",
                     )[0]
                     predict_line = plt.plot(
@@ -233,7 +233,7 @@ def plot_trajectory(args, loader, generator):
                         ),
                         color="#ffff00",
                         ls="--",
-                        linewidth=2,
+                        linewidth=４,
                         label="Predicted Trajectory",
                     )[0]
 
