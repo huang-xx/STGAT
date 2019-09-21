@@ -144,7 +144,7 @@ def evaluate(args, loader, generator):
 
             for _ in range(args.num_samples):
                 pred_traj_fake_rel = generator(
-                    obs_traj_rel, obs_traj, seq_start_end, 0, False, 3
+                    obs_traj_rel, obs_traj, seq_start_end, 0, 3
                 )
                 pred_traj_fake_rel = pred_traj_fake_rel[-args.pred_len :]
 
