@@ -6,7 +6,7 @@ import torch
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.style.use("dark_background")
+plt.style.use("seaborn-dark")
 from data.loader import data_loader
 from models import TrajectoryGenerator
 from utils import (
@@ -167,6 +167,7 @@ def plot_trajectory(args, loader, generator):
             all_model_output_traj.append(model_output_traj_best)
 
             for (start, end) in seq_start_end:
+                plt.figure(figsize=(20,15), dpi=100)
                 ground_truth_input_x_piccoor = (
                     obs_traj[:, start:end, :].cpu().numpy()[:, :, 0].T
                 )
@@ -191,7 +192,7 @@ def plot_trajectory(args, loader, generator):
                         ground_truth_input_x_piccoor[i, :],
                         ground_truth_input_y_piccoor[i, :],
                         "r-",
-                        linewidth=４,
+                        linewidth=4,
                         label="Observed Trajectory",
                     )[0]
                     observed_line.axes.annotate(
@@ -207,7 +208,7 @@ def plot_trajectory(args, loader, generator):
                         arrowprops=dict(
                             arrowstyle="->", color=observed_line.get_color(), lw=1
                         ),
-                        size=２０,
+                        size=20,
                     )
                     ground_line = plt.plot(
                         np.append(
@@ -219,7 +220,7 @@ def plot_trajectory(args, loader, generator):
                             ground_truth_output_y_piccoor[i, :],
                         ),
                         "b-",
-                        linewidth=４,
+                        linewidth=4,
                         label="Ground Truth",
                     )[0]
                     predict_line = plt.plot(
@@ -233,13 +234,13 @@ def plot_trajectory(args, loader, generator):
                         ),
                         color="#ffff00",
                         ls="--",
-                        linewidth=４,
+                        linewidth=4,
                         label="Predicted Trajectory",
                     )[0]
 
-                plt.axis("off")
+                #plt.axis("off")
                 plt.savefig(
-                    "./traj_fig/pic_{}.png".format(pic_cnt), bbox_inches="tight"
+                    "./traj_fig/pic_{}.png".format(pic_cnt)
                 )
                 plt.close()
                 pic_cnt += 1
