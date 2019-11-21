@@ -15,6 +15,7 @@ All the data comes from the [SGAN](https://github.com/agrimgupta92/sgan) model w
 * To evalutae the model run `python evaluate_model.py`
 * Using the default parameters in the code, you can get most of the numerical results presented in the paper. But a reasonable attention visualization may require trained for a longer time and tuned some parameters. For example, for the zara1 dataset and `pred_len` is 8 time-steps,, you can set `num_epochs` to `600` (line 36 in `train.py`), and the `learning rate` in step3 to `1e-4` (line 180 in `train.py`).
 * The attachment folder contains the code that produces the attention figures presented in the paper
+* Check out the issue of this repo to find out how to get better results on the ETH dataset.
 
 ## Acknowledgments
 All data and part of the code comes from the [SGAN](https://github.com/agrimgupta92/sgan) model. If you find this code useful in your research then please also cite their paper.
