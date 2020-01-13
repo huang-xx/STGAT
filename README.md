@@ -32,5 +32,3 @@ booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
 month = {October},
 year = {2019}
 }
-
-
