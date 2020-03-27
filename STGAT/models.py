@@ -257,7 +257,7 @@ class TrajectoryGenerator(nn.Module):
                 encoded_before_noise_hidden, seq_start_end
             )
             pred_lstm_c_t = torch.zeros_like(pred_lstm_hidden).cuda()
-            output = obs_traj_rel[-1]
+            output = obs_traj_rel[self.obs_len-1]
             if self.training:
                 for i, input_t in enumerate(
                     obs_traj_rel[-self.pred_len :].chunk(
