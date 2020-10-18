@@ -23,7 +23,7 @@ All the data comes from the [SGAN](https://github.com/agrimgupta92/sgan) model w
 ## Acknowledgments
 All data and part of the code comes from the [SGAN](https://github.com/agrimgupta92/sgan) model. If you find this code useful in your research then please also cite their paper.
 
-If you have any questions, please contact huangyingfan@ict.ac.cn, and if you find this repository useful for your research, please cite the following paper:
+If you have any questions, please contact huangyingfan@outlook.com, and if you find this repository useful for your research, please cite the following paper:
 ```
 @InProceedings{Huang_2019_ICCV,
 author = {Huang, Yingfan and Bi, Huikun and Li, Zhaoxin and Mao, Tianlu and Wang, Zhaoqi},
